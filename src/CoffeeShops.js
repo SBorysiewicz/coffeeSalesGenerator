@@ -1,27 +1,33 @@
+import coffeeShopList from './CoffeeShopList';
+
+const maxSales = 8000;
+const minSales = 1000;
+
 const shops = () => {
-    return [
-        buildShop('Mikes Coffee', 'Keilor', 'Victoria', false, 1300, 3400),
-        buildShop('Coffee Pot', 'Armadale', 'Western Australia', false, 900, 2300),
-        buildShop('Coffee Snobs', 'Melbourne', 'Victoria', true, 900, 2300),
-        buildShop('Charlottes cafe', 'Sydney', 'New South Wales', true, 2500, 5000),
-        buildShop('Cafe Zoes', 'Melbourne', 'Victoria', true, 6000, 8000),
-        buildShop('Cafe Adams', 'Melbourne', 'Victoria', true, 8000,9000),
-    ];
+
+    const coffeeShops = [];
+    for (let state in coffeeShopList) {
+        coffeeShopList[state].forEach((coffeeShop) =>{
+            coffeeShops.push(buildShop(coffeeShop.name, coffeeShop.suburb, state, coffeeShop.incentive));
+        });
+    };
+
+    return coffeeShops;
 };
 
-const buildShop = (name, suburb, state, incentive, min, max) => {
+const buildShop = (name, suburb, state, incentive) => {
     return {
         'name': name,
         'suburb': suburb,
         'state': state,
         'incentive': incentive ? 'y' : 'n',
         'monthlySales': () => {
-            return Math.ceil(Math.random() * (max - min) + min);
+            return Math.ceil(Math.random() * (maxSales - minSales) + minSales);
         },
         'monthlyOwnCups': () => {
             const factor = incentive ? 0.1 : 0.02;
-            const cupsMin = min * factor;
-            const cupsMax = max * factor;
+            const cupsMin = minSales * factor;
+            const cupsMax = maxSales * factor;
             return Math.ceil(Math.random() * (cupsMax - cupsMin) + cupsMin);
         }
     }

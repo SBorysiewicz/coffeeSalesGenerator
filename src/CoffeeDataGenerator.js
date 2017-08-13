@@ -15,6 +15,7 @@ class CoffeeDataGenerator {
         const toDate = moment(toDateStr, 'DD-MM-YYYY');
         console.log('dates:' + fromDateStr + ' ' + toDateStr);
         console.log('Generating from: ' + dateCounter.format() + ' to ' + toDate.format()); 
+        this.dataFile.writeLine('name, incentive, suburb, state, month, year, sales, sales own cup\r\n'); 
         do {
             this.writeMonthlyValues(dateCounter.format('MMMM'), dateCounter.format('YYYY'));
             dateCounter = dateCounter.add(1, 'month');
@@ -30,8 +31,8 @@ class CoffeeDataGenerator {
             + month + ', ' 
             + year + ', '
             + shop.monthlySales() + ', '
-            + shop.monthlyOwnCups() + ', '
-            + '\n'
+            + shop.monthlyOwnCups()
+            + '\r\n'
         );
         });
     }
