@@ -38,7 +38,7 @@ const coffeeShopList = {
         {
             name: "Workshop Espresso",
             suburb: "Sydney",
-            incentive: false
+            incentive: true
         },
         {
             name: "Campos Coffee",
@@ -68,7 +68,7 @@ const coffeeShopList = {
         {
             name: "Double Barrel Cafe",
             suburb: "Sydney",
-            incentive: false
+            incentive: true
         },
         {
             name: "Hemingway's",
@@ -114,7 +114,7 @@ const coffeeShopList = {
         {
             name: "Brother Baba Budan",
             suburb: "Melbourne",
-            incentive: false
+            incentive: true
         }, {
             name: "The League of Honest Coffee",
             suburb: "Melbourne",
@@ -130,7 +130,7 @@ const coffeeShopList = {
         }, {
             name: "The Kettle Black",
             suburb: "South Melbourne",
-            incentive: false
+            incentive: true
         }, {
             name: "Seven Seeds",
             suburb: "Carlton",
@@ -146,7 +146,7 @@ const coffeeShopList = {
         }, {
             name: "Everyday Coffee",
             suburb: "Collingwood",
-            incentive: false
+            incentive: true
         }, {
             name: "St Ali",
             suburb: "South Melbourne",
@@ -174,7 +174,7 @@ const coffeeShopList = {
         }, {
             name: "Two Birds One Stone",
             suburb: "South Yarra",
-            incentive: false
+            incentive: true
         }, {
             name: "The Premises",
             suburb: "Kensington",
@@ -192,7 +192,7 @@ const coffeeShopList = {
     "QLD": [{
         name: "John Mills Himself",
         suburb: "Brisbane",
-        incentive: false
+        incentive: true
     }, {
         name: "Scout",
         suburb: "Brisbane",
@@ -200,7 +200,7 @@ const coffeeShopList = {
     }, {
         name: "Caffiend",
         suburb: "Cairns",
-        incentive: false
+        incentive: true
     }, {
         name: "Bunker",
         suburb: "Milton",
@@ -240,7 +240,7 @@ const coffeeShopList = {
     }, {
         name: "No Name Lane",
         suburb: "Broadbeach",
-        incentive: false
+        incentive: true
     }, {
         name: "The Ponycat Cafe",
         suburb: "Brisbane",
@@ -260,7 +260,7 @@ const coffeeShopList = {
     }, {
         name: "Campos Coffee",
         suburb: "Brisbane",
-        incentive: false
+        incentive: true
     }, {
         name: "Dovetail On Overend",
         suburb: "Norman Park",
@@ -289,7 +289,7 @@ const coffeeShopList = {
     }, {
         name: "The Pantry on Egmont",
         suburb: "Hawthorn",
-        incentive: false
+        incentive: true
     }, {
         name: "Paddy's Lantern",
         suburb: "Adelaide",
@@ -309,7 +309,7 @@ const coffeeShopList = {
     }, {
         name: "The Stranded Store",
         suburb: "Colonel Light Gardens South",
-        incentive: false
+        incentive: true
     }, {
         name: "Hey Jupiter",
         suburb: "Adelaide",
@@ -337,7 +337,7 @@ const coffeeShopList = {
     }, {
         name: "Cafe Komodo",
         suburb: "Prospect",
-        incentive: false
+        incentive: true
     }, {
         name: "PURE - Boutique Coffee Bar",
         suburb: "Glenelg",
@@ -350,6 +350,87 @@ const coffeeShopList = {
         name: "The Annex",
         suburb: "Glenelg",
         incentive: false
+    }],
+    "WA": [{
+        name: "Harvest Espresso",
+        suburb: "Victoria Park",
+        incentive: false
+    }, {
+        name: "Piccolo's Corner",
+        suburb: "West Leederville",
+        incentive: false
+    }, {
+        name: "La Veen Coffee & Kitchen",
+        suburb: "Perth",
+        incentive: false
+    }, {
+        name: "Lowdown",
+        suburb: "Perth",
+        incentive: false
+    }, {
+        name: "Moana Coffee",
+        suburb: "Perth",
+        incentive: false
+    }, {
+        name: "The Attic",
+        suburb: "Fremantle",
+        incentive: false
+    }, {
+        name: "Little Willy's",
+        suburb: "Northbridge",
+        incentive: true
+    }, {
+        name: "Chalky’s Espresso Bar",
+        suburb: "Fremantle",
+        incentive: false
+    }, {
+        name: "Sherbet",
+        suburb: "Maylands",
+        incentive: false
+    }, {
+        name: "Bossman Coffee",
+        suburb: "Mount Lawley",
+        incentive: false
+    }, {
+        name: "Yelo",
+        suburb: "Trigg",
+        incentive: false
+    }, {
+        name: "Typika Cafe",
+        suburb: "Claremont",
+        incentive: false
+    }, {
+        name: "Bench Espresso",
+        suburb: "Perth",
+        incentive: true
+    }, {
+        name: "Small Print",
+        suburb: "Perth",
+        incentive: false
+    }, {
+        name: "Engine Room Espresso",
+        suburb: "North Perth",
+        incentive: false
+    }, {
+        name: "Architects and Heroes",
+        suburb: "Subiaco",
+        incentive: true
+    }, {
+        name: "Yocal",
+        suburb: "Fremantle",
+        incentive: false
+    }, {
+        name: "The Daily Espresso Bar",
+        suburb: "Swanbourne",
+        incentive: false
+    }, {
+        name: "Roasting Warehouse",
+        suburb: "South Fremantle",
+        incentive: false
+    }, {
+        name: "Elixir Coffee Specialists",
+        suburb: "Nedlands",
+        incentive: true
     }]
 };
 export default coffeeShopList;
