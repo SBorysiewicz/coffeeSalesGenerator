@@ -2,6 +2,10 @@ const maxSales = 8000;
 const minSales = 1000;
 const minVariance = 100;
 const maxVariance = 250;
+const noIncentiveFactor = 0.1;
+const incentiveFactor = 0.02;
+const growthFactorInitial = 0.1;
+const grouwthFactorIncrease = 0.01;
 
 export default class CoffeeShop {
     constructor(name, suburb, state, incentive) {
@@ -10,6 +14,7 @@ export default class CoffeeShop {
         this.state = state;
         this.incentive = incentive;
         this.averageSales = Math.ceil(Math.random() * (maxSales - minSales) + minSales);
+        this.growthFactor = growthFactorInitial;
     }
 
     monthlySales() {
@@ -20,9 +25,11 @@ export default class CoffeeShop {
     };
 
     monthlyOwnCups(sales) {
-        const factor = this.incentive ? 0.1 : 0.02;
-        const cupsMin = sales * 0.5 * factor;
-        const cupsMax = sales * factor;
+        const factor = this.incentive ? noIncentiveFactor : incentiveFactor;
+        const cupsMin = sales * 0.5 * factor * this.growthFactor;
+        const cupsMax = sales * factor * this.growthFactor;
+        this.growthFactor = this.growthFactor + grouwthFactorIncrease;
+
         return Math.ceil(Math.random() * (cupsMax - cupsMin) + cupsMin);
     };
 } 
